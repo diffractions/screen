@@ -67,7 +67,14 @@ class WFrame 		extends JFrame {
 		frame1.setBackground(new Color(0, 0, 0, 0));
  		add(frame1);
 		while(true){
+
+			try{
+				Thread.sleep(15*60*1000);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			} 
 			setVisible(true);
+
 	
 			for(int i = 0; i< ((height/squareSide)+1); i++ ){
 				for(int j = 0; j< (( width/squareSide)+1); j++ ){
@@ -94,10 +101,5 @@ class WFrame 		extends JFrame {
 				e.printStackTrace();
 			} 
 
-			try{
-				Thread.sleep(15*60*1000);
-			}catch(InterruptedException e){
-				e.printStackTrace();
-			} 
 		}}
 }
